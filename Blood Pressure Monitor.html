@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements Reference - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="Home.html" class="logo">Lucy Petersen</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="Home.html">Home</a></li>
+							<li><a href="AboutMe.html">About Me</a></li>
+							<li class="active"><a href="projects.html">Projects</a></li>
+						</ul> 
+						<ul class="icons">
+							<li><a href="mailto:lucypetersen123@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="#" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
+							<li><a href="https://www.linkedin.com/in/lucy-petersen/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="Resume - Lucy Petersen.pdf" class="icon solid fa-download"></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section class="post">
+								<header class="major">
+									<h1>Blood Pressure Monitor</h1>
+                                    <span class="date">March 2023</span>
+                                
+								</header>
+
+						<!-- Text stuff -->
+							<p><span class="image left"><img src="images/Blood pressure main.jpeg" alt="Diagram of blood pressure cuff and heart flow" /></span>Using knowledge of mechatronics, python, and pysiology to design and build a fully functional blood pressure monitor.<br></p>
+							<p><b>Skills:</b>Medical Device Design, Python, Circuit Design, Experimental Design, Mechatronics<br><br></p>
+                        
+							<!-- Project Goal -->           
+                            <h2>Project Goal</h2>
+                            <div class="box">
+                                <p>The goal of this project was to design a circuit using a Honeywell gague pressure transducer and write code that outputs the blood pressure of a patient. The design of the circuit was then compared to on market blood pressure sensors using statistical analysis. </p>
+								<p><span class="image left"><img src="images/pressure vs time.png" alt="" /></span>The goal of the physical filters and the code is to transition from the raw data of pressure vs time (left) to numerical outputs of blood pressure and heart rate.</p><br>
+							</div>
+
+                        <!-- Circuit Diagram --> 
+							<h2>Circuit Overview</h2>
+							<p><span class="image left"><img src="images/Circuit Diagram.png" alt="circuit diagram of blood pressure monitor" /></span>The circuit featured an initial amplifier to increase the impedence throghout. The signal was then fed through a high pass filter designed to filter out any low frequency noise such as the variation in pressure caused by pumping. Another amplifier came before a second filter. The signal is then fed through a low pass filter designed to filter out noise with high frequency such as that caused by movement.</p><br><br><br>
+							<p><span class="image right"><img src="images/my data pressure vs time.png" alt="pressure vs time graph collected from blood pressure monitor before filter" /></span>The pressure readings before the signal is filtered through the circuit are very similar to the expected output of the cuff. Blood pressure cannot be directly taken off of this graph.</p><br><br><br><br>
+							<p><span class="image right"><img src="images/filtered data.png" alt="pressure vs time graph collected from blood pressure monitor after filter" /></span> After filtration, the blood pressure graph looses information about the total pressure but adds details about the oscillations. Blood pressure also cannot be directly taken off of this graph but it provides more of the information required to calculate it. The second graph has also been trimmed along the time axis to the relevant data.</p><br>
+						<!-- Code Overview --> 
+							<h2>Code Overview</h2>
+							<p>The code is used to transform the pressure vs time readings output by the circuit into blood pressure. There are three elements to blood pressure readings. Systolic pressure is the amount of pressure in the arteries when the heart is contracted. Diastolic pressure is the amount of pressure in the arteries when the heart is relaxed. Mean arterial presssure is the average pressure during one cardiac cycle. <br><br>The mean artirial pressure (MAP) is found at the peak of the largest oscillation of pressure (indicated by the center red line below). Systolic pressure is found at the peak where the magnitude of the oscillation corresponds to 55% of the maximum oscillation (indicated by the left most green line). Diastolic pressure occures at the peak corresponding to when the pressure has decreased to 70% of the maximum ocsillation magnitude (right most green line).</p>
+							<p><span class="image fit"><img src="images/blood pressure pieces.png" alt="" /></span></p>
+							<p>The figure above consists of three graphs: the output directly from the instrumentational amplifier (top), the output from the band pass filter (middle), and the magnitude of the pressure ocillation peaks (bottom).</p>
+							<p><span class="image left"><img src="images/Peaks Graph.png" alt="" /></span>The peaks must be identified to find any blood pressure numbers. Peaks were identified using the python peak finder function with parameters on threshold, prominence, and distance (shown left).</p><br><br><br><br>
+							<p><span class="image left"><img src="images/analyzed data.png" alt="" /></span>The mean arterial pressure of this data set is calculated using a python algerithm and is output to be 93.08 mmHg. Similarly, diastolic pressure was calculated to be 62.88 mmHg and systolic pressure was calculated to be 127.44 mmHg. These numbers reflect a slightly elevated blood pressure which is accurate for the subject they were taken from. <br>*Note that in this image the graphs are misaligned. During the calculations the graphs were aligned.*</p>
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="split contact">
+						<section>
+							<h3>Email</h3>
+							<p><a href="mailto:lucypetersen123@gmail.com">lucypetersen123@gmail.com</a></p>
+						</section>
+						<section>
+							<h3>Phone</h3>
+							<p><a href="#">(720) 666-4367</a></p>
+						</section>
+						<section>
+							<h3>LinkedIn</h3>
+							<p><a href="https://www.linkedin.com/in/lucy-petersen/">https://www.linkedin.com/in/lucy-petersen/</a></p>
+						</section>
+					</section>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
