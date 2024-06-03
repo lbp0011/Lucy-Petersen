@@ -4688,14 +4688,13 @@ input, select, textarea {
 
 	}
 
-<!--Timeline-->
-
+/*TIMELINE*/
 
 .cd-container {
   width: 90%;
   max-width: 1080px;
   margin: 0 auto;
-  background: #2B343A;
+  background: #e6e5de;
   padding: 0 10%;
   border-radius: 2px;
 }
