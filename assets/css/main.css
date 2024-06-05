@@ -4867,7 +4867,7 @@ Main components
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid #333C42;
+  border-right: 7px solid #e6e5de;
 }
 
 @media only screen and (min-width: 768px) {
